@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+
+
+
+
+    <node name="r1_tf_broadcaster" pkg="tf_tut" type="m2wr_broadcaster.py" respawn="false" output="screen" >
+      <param name="m2wr" type="string" value="/robot1/odom" />
+    </node>
+
+
+	<node pkg="tf_tut" type="add_frame.py"
+          name="laser" />
+    <!-- <node name="r2_tf_broadcaster" pkg="tf_tut" type="m2wr_broadcaster.py" respawn="false" output="screen" >
+      <param name="m2wr" type="string" value="/robot2/odom" /> 
+    </node> -->
+
+    
+    <!-- <node name="listener" pkg="tf_tut" type="m2wr_listener.py" /> -->
+
+
+</launch>
+
