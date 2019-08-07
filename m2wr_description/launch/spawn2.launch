@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <param name="robot_description2" command="$(find xacro)/xacro.py '$(find m2wr_description)/urdf 1/m2wr.xacro'" />
+    
+    <arg name="x" default="0"/>
+    <arg name="y" default="0"/>
+    <arg name="z" default="0.5"/>
+    <arg name="robot_name" default="robot2"/>
+    
+    <node name="mybot_spawn2" pkg="gazebo_ros" type="spawn_model" output="screen"
+          args="-urdf 1 -param robot_description2 -model $(arg robot_name) -x $(arg x) -y $(arg y) -z $(arg z)" >
+          <!-- <remap from="tf" to="gazebo_tf"/> -->
+    </node>          
+</launch>

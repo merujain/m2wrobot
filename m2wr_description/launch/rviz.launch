@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find m2wr_description)/urdf/m2wr.xacro'"/>
+
+  <node name="joint_state_publishe_1r" pkg="joint_state_publisher" type="joint_state_publisher">
+    <param name="use_gui" value="False"/>
+  </node>
+
+  <node name="robot_state_publisher_1" pkg="robot_state_publisher" type="state_publisher"/>
+
+
+
+
+  <!-- <param name="robot_description2" command="$(find xacro)/xacro.py '$(find m2wr_description)/urdf 1/m2wr.xacro'"/>
+
+  <node name="joint_state_publisher_2" pkg="joint_state_publisher" type="joint_state_publisher">
+    <param name="use_gui" value="False"/>
+  </node>
+
+  <node name="robot_state_publishe_2" pkg="robot_state_publisher" type="state_publisher"/> -->
+
+
+
+  <node name="rviz" pkg="rviz" type="rviz" />
+
+</launch>
+
